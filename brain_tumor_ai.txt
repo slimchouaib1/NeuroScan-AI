@@ -1,0 +1,61 @@
+brain_tumor_ai/
+│
+├── app/                         # Streamlit frontend (UI)
+│   ├── main.py                  # Main Streamlit app
+│   ├── utils.py                 # Helper functions (visualization, overlays)
+│   ├── components/              # Streamlit custom components
+│   │   ├── upload_component.py
+│   │   ├── display_component.py
+│   ├── assets/                  # Icons, images, CSS
+│
+├── backend/                     # FastAPI backend for ML inference
+│   ├── api.py                   # FastAPI app
+│   ├── inference.py             # Inference pipeline (classifier + segmentation)
+│   ├── classifier_model.py      # Classification model loading & prediction
+│   ├── segmentation_model.py    # UNet or SegFormer loading & prediction
+│   ├── explainability.py        # Grad-CAM logic
+│   ├── preprocessing.py         # MRI preprocessing logic
+│   ├── postprocessing.py        # mask smoothing, contour extraction
+│   ├── schemas.py               # Pydantic schemas for requests/responses
+│
+├── models/                      # Pretrained model weights
+│   ├── classifier.pth
+│   ├── segmentation.pth
+│   ├── ...
+│
+├── data/                        # Dataset storage (ignored from GitHub)
+│   ├── raw/
+│   ├── processed/
+│   └── samples/                 # few sample MRI for UI testing
+│
+├── notebooks/                   # Jupyter notebooks for training / experiments
+│   ├── 01_eda.ipynb
+│   ├── 02_train_classifier.ipynb
+│   ├── 03_train_segmentation.ipynb
+│   ├── 04_gradcam_tests.ipynb
+│
+├── training/                    # Clean training scripts used in notebooks
+│   ├── train_classifier.py
+│   ├── train_segmentation.py
+│   ├── dataset_loader.py
+│   ├── utils.py
+│
+├── docker/                      # Deployment files
+│   ├── Dockerfile.api           # FastAPI container
+│   ├── Dockerfile.app           # Streamlit container
+│   ├── docker-compose.yml       # Run API + UI together
+│
+├── scripts/                     # Utility scripts
+│   ├── convert_nifti_to_png.py
+│   ├── generate_heatmaps.py
+│   ├── evaluate_metrics.py
+│
+├── tests/                       # Unit tests
+│   ├── test_api.py
+│   ├── test_models.py
+│   ├── test_preprocessing.py
+│
+├── requirements.txt             # Python dependencies
+├── .gitignore
+├── README.md                    # Full documentation
+└── LICENSE
