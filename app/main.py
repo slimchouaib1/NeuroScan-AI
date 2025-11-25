@@ -4,6 +4,13 @@ import io
 import os
 import sys
 
+# ---- Page Config ----
+st.set_page_config(
+    page_title="NeuroScan AI",
+    page_icon="🧠",
+    layout="wide"
+)
+
 # ---- Inject CSS ----
 css_path = os.path.join(os.path.dirname(__file__), "assets", "styles.css")
 if os.path.exists(css_path):
@@ -19,12 +26,7 @@ if project_root not in sys.path:
 from app.components.upload_component import upload_mri
 from app.components.display_component import show_results
 
-# ---- Page Config ----
-st.set_page_config(
-    page_title="NeuroScan AI",
-    page_icon="🧠",
-    layout="wide"
-)
+# (moved page config above CSS injection to satisfy Streamlit requirement)
 
 # ---- Sidebar ----
 st.sidebar.title("NeuroScan AI")

@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual env
+.venv/
+venv/
+
+# Data
+data/
+*.pt
+*.pth
+*.onnx
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+

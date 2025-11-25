@@ -1,0 +1,67 @@
+####################
+# CORE FRAMEWORKS
+####################
+streamlit==1.29.0
+fastapi==0.110.0
+uvicorn==0.29.0
+
+####################
+# MACHINE LEARNING
+####################
+torch==2.2.0
+torchvision==0.17.0
+torchaudio==2.2.0
+numpy==1.26.0
+scikit-learn==1.4.0
+
+####################
+# COMPUTER VISION
+####################
+opencv-python==4.9.0.80
+Pillow==10.2.0
+
+####################
+# MEDICAL IMAGING
+####################
+nibabel==5.2.0       # NIfTI MRI format (BRATS)
+pydicom==2.4.4       # DICOM hospital images
+SimpleITK==2.3.1     # medical preprocessing, resampling
+
+####################
+# EXPLAINABILITY
+####################
+captum==0.7.0        # GradCAM, Integrated Gradients for PyTorch
+matplotlib==3.8.2    # for visualizations (heatmaps)
+
+####################
+# DATA / API / UTILS
+####################
+requests==2.31.0
+python-multipart==0.0.9   # FastAPI file uploads
+tqdm==4.66.2
+pandas==2.2.0
+
+####################
+# IMAGE FORMATS SUPPORT
+####################
+imageio==2.34.0
+scikit-image==0.22.0
+
+####################
+# MODEL DEPLOYMENT
+####################
+onnx==1.15.0
+onnxruntime==1.17.0
+
+####################
+# OPTIONAL (BUT RECOMMENDED)
+####################
+albumentations==1.4.0       # MRI augmentations
+einops==0.7.0               # for modern transformer layers
+segmentation-models-pytorch==0.3.3   # UNet, UNet++, DeepLabV3 etc.
+
+####################
+# REMOVE JUNK IN WARNINGS
+####################
+protobuf==4.25.2
+
